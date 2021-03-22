@@ -9,3 +9,6 @@ footer{background-color: #ffaec0; height: 50px; padding: 50px 30px 0px 0px;}
 footer{
     margin-top: 50px;
 }
+
+table, td,th{border: 1px solid black;}
+table{ border-collapse: collapse;}
