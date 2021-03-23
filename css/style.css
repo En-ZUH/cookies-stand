@@ -1,6 +1,6 @@
 body{background-color: #f0e4d7 ;}
 
-h1{color: #ffab73; text-align: center;}
+h1{color: crimson; text-align: center;}
 img{background-color: #ffd384; margin-bottom: 50px;}
 
 a{ background-color: #fff9b0; font-style: inherit ; font-size: 40; }
@@ -9,3 +9,6 @@ footer{background-color: #ffaec0; height: 50px; padding: 50px 30px 0px 0px;}
 footer{
     margin-top: 50px;
 }
+
+table, td,th{border: 1px solid black;}
+table{ border-collapse: collapse;}
