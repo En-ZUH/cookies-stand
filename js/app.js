@@ -39,7 +39,7 @@ let footer_contents= [];
 
 //_______________________________________________________
 
-function table_footer(){
+/*function table_footer(){
   //first cell
   const headerRowEl2 = document.createElement('tr');
   tableEl.appendChild(headerRowEl2);
@@ -61,8 +61,8 @@ function table_footer(){
   {footer_contents.push(0);
     final_total += footer_contents[i];
   }
-*/
-}
+*
+}*/
 //_______________________________________________________
 function toprender(){
 
@@ -75,10 +75,10 @@ function toprender(){
 
 
 
-  const firstrowEl = document.createElement('tr');
+  // const firstrowEl = document.createElement('tr');
   tableEl.appendChild(firstrowEl);
 
-  const th1El = document.createElement('th');
+  // const th1El = document.createElement('th');
   firstrowEl.appendChild(th1El);
 
 
