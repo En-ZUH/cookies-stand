@@ -3,7 +3,7 @@ body{background-color: #f0e4d7 ;}
 h1{color: crimson; text-align: center;}
 img{background-color: #ffd384; margin-bottom: 50px;}
 
-a{ background-color: #fff9b0; font-style: inherit ; font-size: 40; }
+a{ background-color: hsl(55, 49%, 39%); font-style: inherit ; font-size: 40; }
 
 footer{background-color: #ffaec0; height: 50px; padding: 50px 30px 0px 0px;}
 footer{
@@ -14,3 +14,9 @@ table, td,th{border: 1px solid black;}
 
 table{ border-collapse: collapse;}
 
+form{ background-color:darksalmon; border-style:groove; font-size: 20px; font-weight: 600; margin-bottom: 71px; padding-top: 17px;}
+
+fieldset{background-color: lightgreen; padding: 0px 0px 0px 30px; margin-top: 0px 0px 0px 0px;}
+legend{ padding: 0px 0px 23px 648px; font-size: x-large;}
+
+div{margin:  0px 0px 0px 0px; padding: 0px 0px 0px 0px;}
