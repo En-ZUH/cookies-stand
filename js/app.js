@@ -21,25 +21,11 @@ divEl.appendChild(tableEl);
 //_______________________________________________________
 
 let final_total=0;
-
-
-//let footer_contents= [];
-
-
-
-let footer_contents= [];
-
-/*for(let i=0; i<times.length; i++)
-{
-  footer_contents.push(0);
-
-}*/
-//console.log(footer_contents);
-
+let footer_contents= [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 //_______________________________________________________
 
-/*function table_footer(){
+function table_footer(){
   //first cell
   const headerRowEl2 = document.createElement('tr');
   tableEl.appendChild(headerRowEl2);
@@ -49,20 +35,29 @@ let footer_contents= [];
   td3.textContent='Totals';
 
   // other cells
+
+
+
+
   for (let i = 0; i < footer_contents.length; i++) {
     const td3 =document.createElement('td');
     headerRowEl2.appendChild(td3);
     td3.textContent= footer_contents[i];
-    footer_contents.push(0);
-    final_total += footer_contents[i];
+    // footer_contents.push(0);
+
 
   }
-  /*for (let i = 0; i < times.length; i++)
-  {footer_contents.push(0);
-    final_total += footer_contents[i];
-  }
-*
-}*/
+  for (let i = 0; i < times.length; i++)
+  {
+    final_total += footer_contents[i];}
+
+  const td4 = document.createElement('td');
+  headerRowEl2.appendChild(td4);
+  td4.textContent = final_total;
+
+}
+
+
 //_______________________________________________________
 function toprender(){
 
@@ -114,7 +109,7 @@ Cookie.prototype.getCookiesPerHour= function()
     this.cookiesPerHour.push(Math.floor(getRandomNumber(this.minCust,this.maxCust)*this.avgCookieSale));
 
     this.total= this.total+ this.cookiesPerHour[i];
-    footer_contents[i]+= this.cookiesPerHour;
+    footer_contents[i]+= this.cookiesPerHour[i];
   }
 
   this.totalOfstore.push(this.total);
@@ -155,32 +150,26 @@ Cookie.prototype.render= function(){
 
 toprender();
 
-
-/*const seattle= new Cookie('seattle', 23, 65, 6.3);
-
 const seattle= new Cookie('seattle', 23, 65, 6.3);
-
 seattle.render();
+
 const Tokyo=   new Cookie('Tokyo', 3, 24, 1.2);
 Tokyo.render();
+
 const Dubai=   new Cookie('Dubai', 11, 38, 3.7);
 Dubai.render();
+
 const Paris=   new Cookie('Paris', 20, 38, 2.3);
 Paris.render();
+
 const Lima=    new Cookie('Lima', 2, 16, 4.6);
 Lima.render();
-
-
-
-
 
 table_footer();
 
 
-table_footer();*/
 
-//console.log('hii');
 
-//console.log('hii');
+
 
 
