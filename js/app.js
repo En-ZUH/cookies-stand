@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 
 
 
@@ -88,6 +89,7 @@ function toprender(){
   th2El.textContent = 'Daily Location Total';
 }
 //_______________________________________________________
+let newstore=[];
 
 function Cookie(location, minCust, maxCust, avgCookieSale, cookiesPerHour, total)
 {
@@ -98,6 +100,7 @@ function Cookie(location, minCust, maxCust, avgCookieSale, cookiesPerHour, total
   this.cookiesPerHour=[];
   this.total=0;
   this.totalOfstore=[];
+  newstore.push(this);
 }
 //_______________________________________________________
 
@@ -138,15 +141,6 @@ Cookie.prototype.render= function(){
   td2El.textContent=`${this.total}`;
 
 };
-//_______________________________________________________*/
-
-/*for(let i=0; i<times.length; i++){
-  seattle.getCookiesPerHour();
-  Tokyo.getCookiesPerHour();
-  Dubai.getCookiesPerHour();
-  Paris.getCookiesPerHour();
-  Lima.getCookiesPerHour();
-}*/
 
 toprender();
 
@@ -167,7 +161,69 @@ Lima.render();
 
 table_footer();
 
+//______________________________________________________
 
+
+
+/*let myform= document.getElementById('storeform');
+myform.addEventListener('submit', addNewStore);
+
+function addNewStore (event)
+{
+  event.preventDefault();
+  let location = event.target.location.value;
+  let minCust =Number(event.target.minCust.value);
+  let maxCust =Number(event.target.maxCust.value);
+  let avgCookieSale =Number(event.target.avgCookieSale.value);
+
+  let newloc= new Cookie(location, minCust, maxCust, avgCookieSale,[],0);
+
+  newloc.render();
+
+  console.log(newloc.render());
+
+
+}*/
+
+const storeForm =document.getElementById('storeform');
+storeForm.addEventListener('submit', AddNewStore);
+function AddNewStore(event){
+// to remove the last row: total
+  const rowtodelet = tableEl.rows.length;
+  tableEl.deleteRow(rowtodelet-1);
+
+  event.preventDefault();
+
+  let location= event.target.location.value;
+  let maxCust = Number(event.target.maxCust.value);
+  let minCust =Number(event.target.minCust.value);
+  let avgCookieSale = Number(event.target.avgCookieSale.value);
+
+
+
+  let newStore = new Cookie(location, minCust, maxCust, avgCookieSale,[],0);
+  newStore.render();
+
+// to add the last row: total
+  const headerRowEl22 = document.createElement('tr');
+  tableEl.appendChild(headerRowEl22);
+
+  const td33 =document.createElement('th');
+  headerRowEl22.appendChild(td33);
+  td33.textContent='Totals';
+
+  for (let i = 0; i < footer_contents.length; i++) {
+    const td33 =document.createElement('td');
+    headerRowEl22.appendChild(td33);
+    td33.textContent=footer_contents[i];
+  }
+  for (let i = 0; i < times.length; i++) {
+    final_total+= final_total[i];
+  }
+  const td44 =document.createElement('td');
+  headerRowEl22.appendChild(td44);
+  td44.textContent=final_total;
+}
 
 
 
