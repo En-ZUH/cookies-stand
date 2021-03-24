@@ -27,7 +27,7 @@ let final_total=0;
 
 
 
-let footer_contents= [];
+let footer_contents= [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 /*for(let i=0; i<times.length; i++)
 {
@@ -39,7 +39,7 @@ let footer_contents= [];
 
 //_______________________________________________________
 
-/*function table_footer(){
+function table_footer(){
   //first cell
   const headerRowEl2 = document.createElement('tr');
   tableEl.appendChild(headerRowEl2);
@@ -53,15 +53,15 @@ let footer_contents= [];
     const td3 =document.createElement('td');
     headerRowEl2.appendChild(td3);
     td3.textContent= footer_contents[i];
-    footer_contents.push(0);
+    //footer_contents.push(0);
     final_total += footer_contents[i];
 
-  }
-  /*for (let i = 0; i < times.length; i++)
+  }}
+/*for (let i = 0; i < times.length; i++)
   {footer_contents.push(0);
     final_total += footer_contents[i];
   }
-*
+
 }*/
 //_______________________________________________________
 function toprender(){
@@ -156,28 +156,27 @@ Cookie.prototype.render= function(){
 toprender();
 
 
-/*const seattle= new Cookie('seattle', 23, 65, 6.3);
+
 
 const seattle= new Cookie('seattle', 23, 65, 6.3);
-
 seattle.render();
+
 const Tokyo=   new Cookie('Tokyo', 3, 24, 1.2);
 Tokyo.render();
+
 const Dubai=   new Cookie('Dubai', 11, 38, 3.7);
 Dubai.render();
+
 const Paris=   new Cookie('Paris', 20, 38, 2.3);
 Paris.render();
+
 const Lima=    new Cookie('Lima', 2, 16, 4.6);
 Lima.render();
-
-
-
-
 
 table_footer();
 
 
-table_footer();*/
+
 
 //console.log('hii');
 
