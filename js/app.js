@@ -218,7 +218,7 @@ function AddNewStore(event){
     td33.textContent=footer_contents[i];
   }
   for (let i = 0; i < times.length; i++) {
-    final_total+= final_total[i];
+    final_total+= footer_contents[i];
   }
   const td44 =document.createElement('td');
   headerRowEl22.appendChild(td44);
