@@ -1,9 +1,17 @@
 body{background-color: #f0e4d7 ;}
 
 h1{color: crimson; text-align: center;}
+
+#workingHours{ margin: 0px 30px 0px 0px ; color:rgb(207, 138, 152); display: inline; width: 80%;}
 img{background-color: #ffd384; margin-bottom: 50px;}
 
+
+div button{  margin-left: 15px;}
+
+body nav ul li a{ font-style: inherit ; font-size: 20px; color: rgb(207, 138, 152); margin: 0px 15px 150px 0px; padding: 0px 15px 10px 0px};
+
 a{ background-color: hsl(55, 49%, 39%); font-style: inherit ; font-size: 40; }
+
 
 footer{background-color: #ffaec0; height: 50px; padding: 50px 30px 0px 0px;}
 footer{
